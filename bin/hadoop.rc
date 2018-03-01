@@ -1,0 +1,133 @@
+# Hadoop resource file
+
+function hadoop() {
+    if [ -n "$hadoop_exec_conf" ]; then
+        $hadoop_exec --config $hadoop_exec_conf "$@"
+    else
+        $hadoop_exec "$@"
+    fi
+}
+
+function hdfs() {
+    $hdfs_exec "$@"
+}
+
+function hput() {
+    hdfs dfs -put "$@"
+}
+
+function hget() {
+    hdfs dfs -get "$@"
+}
+
+function hcat() {
+    hdfs dfs -cat "$@"
+}
+
+function hls() {
+    hdfs dfs -ls "$@"
+}
+
+function htext() {
+    hdfs dfs -text "$@"
+}
+
+function hgetmerge() {
+    hdfs dfs -getmerge "$@"
+}
+
+function htouch() {
+    hdfs dfs -touchz "$@" >/dev/null 2>&1
+    return 0
+}
+
+function hexist() {
+    if hdfs dfs -test -e "$@" > /dev/null 2>&1; then
+		return 0
+	fi
+	return 1
+}
+
+function hrmr() {
+    if hexist "$@"; then
+        hdfs dfs -rmr "$@" >/dev/null 2>&1
+    fi
+}
+
+function hrm() {
+    if hexist "$@"; then
+        hdfs dfs -rm "$@" >/dev/null 2>&1
+    fi
+}
+
+function hcp() {
+    hdfs dfs -cp "$@" >/dev/null 2>&1
+}
+
+function hmk() {
+    hdfs dfs -mkdir "$@" >/dev/null 2>&1
+}
+
+function hddfs_part_num() {
+    if hexist "$@"; then
+        hdfs dfs -ls "$@" | grep 'part-' | wc -l
+    fi
+}
+
+function hddfs_size() {
+    if hexist "$@"; then
+        hdfs dfs -dus "$@" | grep "$@" | awk '{print $2;}'
+    fi
+}
+
+function hddfs_time() {
+    if hexist "$@"; then
+        hdfs dfs -ls "$@" | grep "$@" | awk '{print $6","$7}'
+    fi
+}
+
+function hddfs_check() {
+    path=$1
+    num_parts=$2
+    min_size=$3
+    parts=$(hdfs dfs -ls $path | grep 'part-' | wc -l)
+    size=$(hdfs dfs -dus $path | awk '{print $2}')
+    if [[ $parts == $num_parts && $size -ge $min_size || \
+        min_size == 0 ]]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+function get_counter() {
+    cat $1 | grep 'INFO mapred.JobClient:     ' | \
+        sed 's/.*INFO mapred.JobClient:     //' > $2
+}
+
+function hjar() {
+    local tag_file=$log_dir/${job_name/: /.}.$cur_date.tag
+    local log_file=$log_dir/${job_name/: /.}.$cur_date.log
+    local counter_file=$log_dir/${job_name/: /.}.$cur_date.cnt
+    touch $tag_file
+    hadoop jar "$@" 2>&1 | tee $log_file
+    local status=${PIPESTATUS[0]}
+    get_counter $log_file $counter_file
+    return $status
+}
+
+function hcheck() {
+    hexist "$@"
+    if [ $? == 0 ]; then
+        echo "directory \`$@' exists. Remove it? [y|n]"
+        read answer
+        if [ $answer == 'y' -o $answer == 'Y' ]; then
+            hrmr $output
+        else
+            echo "Please remove the directory \`$@' before start this job."
+            return 1
+        fi
+    fi
+    return 0
+}
+

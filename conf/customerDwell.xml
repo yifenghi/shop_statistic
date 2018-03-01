@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<configuration>
+  <property>
+    <name>mapred.reduce.tasks</name>
+    <value>0</value>
+  </property>
+
+  <property>
+    <name>mapred.reduce.slowstart.completed.maps</name>
+    <value>0.9</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mongo.collection.customerinfo</name>
+    <!--value>record_5min_user_info_test</value-->
+    <value>record_5min_user_info</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.customer.shopid</name>
+    <value>planar_graph</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.customer.update</name>
+    <value>update_time</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.customer.create</name>
+    <value>create_time</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.customer.dwell</name>
+    <value>dwell</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.customer.usermac</name>
+    <value>user_mac</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.customer.timestamps</name>
+    <value>time_stamp_list</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.customer.type</name>
+    <value>user_type</value>
+  </property>
+</configuration>
+

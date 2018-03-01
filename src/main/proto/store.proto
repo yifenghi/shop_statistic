@@ -1,0 +1,33 @@
+package doododmsg;
+option java_package = "com.doodod.market.message";
+
+message Customer {
+  optional bytes    phone_mac  = 1; // 顾客手机的 mac 地址
+  repeated uint64   time_stamp = 2; // 顾客在店铺的时间戳
+  optional uint64   time_dwell = 3; // 顾客在店铺的停留时间
+  optional UserType user_type  = 4; // 顾客类型
+  repeated int32    ap_rssi    = 5; // 顾客手机的信号强度
+  optional bytes    phone_brand  = 6; // 顾客手机品牌
+  repeated Visit    user_visit = 7; //顾客到店记录
+}
+
+message Shop {
+  optional uint32   shop_id  = 1; // 店铺 id
+  repeated bytes    ap_mac   = 2; // 店铺部署的 ap mac 地址
+  repeated Customer customer = 3; // 来过店铺的顾客
+  optional uint32   new_customer_num = 4; //店铺新顾客数目
+  optional string   phone_str  = 5; // 顾客手机品牌
+}
+
+enum UserType {
+  CUSTOMER  = 0;
+  PASSENGER = 1;
+  EMPLOYEE  = 2;
+  MACHINE   = 3;
+  OUTDOOR   = 4;
+}
+
+message Visit {
+  optional int32  shop_id      = 1; // 店铺id
+  repeated uint64 visit_date   = 2; // 到来的日期
+}

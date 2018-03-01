@@ -1,0 +1,3 @@
+#*/5 * * * * hdfs /var/lib/hadoop-hdfs/code/deploy/shopstatistic/bin/runAll.sh "`date +"\%Y-\%m-\%d \%H:\%M:00"`" 
+*/5 * * * * hdfs /var/lib/hadoop-hdfs/code/deploy/shopstatistic_with_rssi/shop_statistic/bin/runAll.sh "`date +"\%Y-\%m-\%d \%H:\%M:00"`" 
+0 6 * * * hdfs /var/lib/hadoop-hdfs/code/deploy/shopstatistic_with_rssi/shop_statistic/bin/runDay.sh "`date +"\%Y-\%m-\%d \%H:00:00"`" 

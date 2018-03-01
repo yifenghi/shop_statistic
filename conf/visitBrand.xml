@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<configuration>
+  <property>
+     <name>mapred.reduce.tasks</name>
+     <value>1</value>
+  </property>
+
+  <!--property>
+	<name>mapreduce.output.fileoutputformat.outputdir</name>
+	<value>/group/doodod/test/output</value>
+  </property-->
+
+  <property>
+    <name>mapred.reduce.slowstart.completed.maps</name>
+    <value>0.9</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mongo.collection.brand</name>
+    <value>user_brand</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.brand.name</name>
+    <value>name</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.brand.count</name>
+    <value>count</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.brand.time</name>
+    <value>create_time</value>
+  </property>
+
+</configuration>
+

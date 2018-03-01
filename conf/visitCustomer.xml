@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<configuration>
+  <property>
+	<name>mapred.reduce.tasks</name>
+	<value>1</value>
+  </property>
+
+  <property>
+    <name>mapred.reduce.slowstart.completed.maps</name>
+    <value>0.9</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mongo.collection.count</name>
+    <value>user_count</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.count.id</name>
+    <value>shop_id</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.count.customer</name>
+    <value>customer</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.count.employee</name>
+    <value>employee</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.count.machine</name>
+    <value>machine</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.count.passenger</name>
+    <value>passenger</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.count.total</name>
+    <value>total</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.count.time</name>
+    <value>create_time</value>
+  </property>
+
+</configuration>
+

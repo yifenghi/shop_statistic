@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<configuration>
+  <property>
+	<name>mapred.reduce.tasks</name>
+	<value>1</value>
+  </property>
+
+  <property>
+    <name>mapred.reduce.slowstart.completed.maps</name>
+    <value>0.9</value>
+    <description></description>
+  </property>
+
+  <!--property>
+    <name>merge.input.part</name>
+    <value>/group/doodod/test/input/part/part*</value>
+  </property>
+
+  <property>
+    <name>merge.input.total</name>
+    <value>/group/doodod/test/input/total/part*</value>
+  </property-->
+
+  <property>
+    <name>mongo.collection.userinfo</name>
+    <value>user_type_info</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.user.shopid</name>
+    <value>planar_graph</value>
+  </property>
+  
+  <property>
+    <name>mongo.collection.user.type</name>
+    <value>user_type</value>
+  </property>
+  
+  <property>
+    <name>mongo.collection.user.mac</name>
+    <value>user_mac</value>
+  </property>
+
+</configuration>
+

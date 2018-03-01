@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<configuration>
+  <property>
+     <name>mapred.reduce.tasks</name>
+     <value>1</value>
+  </property>
+
+
+  <property>
+    <name>mapred.reduce.slowstart.completed.maps</name>
+    <value>0.9</value>
+    <description></description>
+  </property>
+
+
+
+</configuration>

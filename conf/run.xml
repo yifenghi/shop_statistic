@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+
+<configuration>
+  <property>
+	<name>mapred.reduce.tasks</name>
+	<value>4</value>
+  </property>
+
+  <!--property>
+	<name>mapred.input.dir</name>
+	<value>/group/doodod/test/tmp*</value>
+  </property>
+
+  <property>
+	<name>mapreduce.output.fileoutputformat.outputdir</name>
+	<value>/group/doodod/test/output</value>
+  </property-->
+
+  <property>
+    <name>mapred.reduce.slowstart.completed.maps</name>
+    <value>0.9</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mongo.db.singlestore</name>
+    <value>bi_single_store</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.apmac</name>
+    <value>store_apmac_relation</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.apmac.mac</name>
+    <value>apmac</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.apmac.shopid</name>
+    <value>store_id</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.businesstime</name>
+    <value>user_settings</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.businesstime.starttime</name>
+    <value>start_time</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.businesstime.endtime</name>
+    <value>end_time</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.businesstime.shopid</name>
+    <value>planar_graph</value>
+  </property>
+
+  <!--property>
+    <name>mapred.child.java.opts</name>
+    <value>-Xmx1700m</value>
+    <description></description>
+  </property-->
+</configuration>
+

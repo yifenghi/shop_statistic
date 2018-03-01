@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<configuration>
+  <property>
+    <name>mapred.reduce.tasks</name>
+    <value>1</value>
+  </property>
+
+  <property>
+    <name>mapred.reduce.slowstart.completed.maps</name>
+    <value>0.9</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mongo.collection.visitinfo</name>
+    <value>user_visit</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.mall.time</name>
+    <value>create_time</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.mall.shopid</name>
+    <value>planar_graph</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.visit.new</name>
+    <value>new_client</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.visit.old</name>
+    <value>old_client</value>
+  </property>
+</configuration>
+

@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+
+<configuration>
+  <property>
+    <name>hbase.zookeeper.quorum</name>
+    <value>hadoop2.palmaplus.com,hadoop3.palmaplus.com,hadoop4.palmaplus.com</value>
+  </property>
+
+  <property>
+	<name>mapred.reduce.tasks</name>
+	<value>1</value>
+  </property>
+
+  <!--property>
+	<name>mapred.input.dir</name>
+	<value>/group/doodod/test/tmp*</value>
+  </property>
+
+  <property>
+	<name>mapreduce.output.fileoutputformat.outputdir</name>
+	<value>/group/doodod/test/output</value>
+  </property-->
+
+  <property>
+    <name>mapred.reduce.slowstart.completed.maps</name>
+    <value>0.9</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mongo.collection.apmac</name>
+    <value>store_apmac_relation</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.apmac.mac</name>
+    <value>apmac</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.apmac.shopid</name>
+    <value>store_id</value>
+  </property>
+  
+  <property>
+    <name>mongo.collection.apmac.status</name>
+    <value>ap_status</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.businesstime</name>
+    <value>user_settings</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.businesstime.starttime</name>
+    <value>start_time</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.businesstime.endtime</name>
+    <value>end_time</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.businesstime.shopid</name>
+    <value>planar_graph</value>
+  </property>
+     
+  <property>
+    <name>mongo.collection.userinfo</name>
+    <value>user_type_info</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.user.shopid</name>
+    <value>planar_graph</value>
+  </property>
+  
+  <property>
+    <name>mongo.collection.user.type</name>
+    <value>user_type</value>
+  </property>
+  
+  <property>
+    <name>mongo.collection.user.mac</name>
+    <value>user_mac</value>
+  </property>
+
+  <property>
+    <name>mongo.collection.user.time</name>
+    <value>create_time</value>
+  </property>
+
+
+  <property>
+    <name>train.passenger.featurelist</name>
+    <value>NULL</value>
+  </property>
+
+  <property>
+    <name>employee.time.filter</name>
+    <value>1</value>
+  </property>
+
+  <property>
+    <name>employee.count.filter</name>
+    <value>4</value>
+  </property>
+
+</configuration>
+

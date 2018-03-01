@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+
+<configuration>
+
+  <property>
+    <name>dfs.blocksize</name>
+    <value>536870912</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>io.sort.factor</name>
+    <value>100</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>io.sort.mb</name>
+    <value>500</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mapred.child.java.opts</name>
+    <value>-Xmx2000m</value>
+    <description></description>
+  </property>
+
+  <!--
+  <property>
+    <name>mapred.input.format.class</name>
+    <value>org.apache.hadoop.mapred.SequenceFileInputFormat</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mapred.output.format.class</name>
+    <value>org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat</value>
+    <description>set it in java</description>
+  </property>
+  -->
+
+  <property>
+    <name>mapred.compress.map.output</name>
+    <value>true</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mapred.map.output.compression.codec</name>
+    <value>org.apache.hadoop.io.compress.GzipCodec</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mapred.map.output.compression.type</name>
+    <value>BLOCK</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mapred.output.compress</name>
+    <value>true</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mapred.output.compression.codec</name>
+    <value>org.apache.hadoop.io.compress.GzipCodec</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mapred.output.compression.type</name>
+    <value>BLOCK</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mapred.reduce.parallel.copies</name>
+    <value>10</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mapred.reduce.tasks</name>
+    <value>500</value>
+    <description></description>
+  </property>
+
+  <property>
+    <name>mapred.task.timeout</name>
+    <value>0</value>
+    <description>task timeout</description>
+  </property>
+
+  <property>
+    <name>mongo.server.list</name>
+    <value>10.1.8.45,10.1.8.46,10.1.8.47</value>
+  </property>
+
+  <property>
+    <name>mongo.server.port</name>
+    <value>27017</value>
+  </property>
+ 
+  <property>
+    <name>mongo.db.singlestore</name>
+    <value>bi_single_store</value>
+  </property>
+ 
+  <property>
+    <name>train.passenger.default.filter</name>
+    <value>3</value>
+  </property>
+</configuration>
